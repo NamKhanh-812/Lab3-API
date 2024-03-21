@@ -10,16 +10,12 @@ router.get('/distributors', async (req, res) => {
     console.log(distributors);
     res.send(distributors)
 })
-<<<<<<< HEAD
 
-=======
->>>>>>> 18cb2d43a4b553e259d48cff6f700e39b5d73f9a
 router.get('/fruits', async (req, res) => {
     const fruits = await Fruits.find()
     console.log(fruits);
     res.send(fruits)
 })
-<<<<<<< HEAD
 
 router.get('/fruits/:id', async (req, res) => {
     try {
@@ -34,13 +30,6 @@ router.get('/fruits/:id', async (req, res) => {
     } catch (error) {
         console.log(error);
     }
-=======
-router.get('/fruits/:id', async (req, res) => {
-    const { id } = req.params // lấy id
-    const fruit = await Fruits.findById(id).populate('id_distributor')
-    console.log(fruit)
-    res.send(fruit)
->>>>>>> 18cb2d43a4b553e259d48cff6f700e39b5d73f9a
 })
 
 router.get('/fruits_in_price', async (req, res) => {
@@ -171,10 +160,6 @@ router.delete('/fruits/delete/:id', async (req, res) => {
     const { id } = req.params;
     const result = await Fruits.deleteOne({ _id: id });
     console.log(result);
-<<<<<<< HEAD
-=======
-
->>>>>>> 18cb2d43a4b553e259d48cff6f700e39b5d73f9a
     res.redirect('../');
 }) 
 
